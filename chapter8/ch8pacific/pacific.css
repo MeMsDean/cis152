@@ -5,19 +5,17 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  background-color: #EAEAEA;
-  color: #555;
+  background-image: linear-gradient(to bottom, #fff, #90c7e3);
+  background-repeat: no-repeat;
+  border: 1px solid #003;
+  box-shadow: 3px 3px 3px #333;
+  color: #666;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
 #wrapper {
-  background-color: #90c7e3;
-  background-image: linear-gradient(to bottom, #fff, #90c7e3);
-  border: 1px solid #003;
-  box-shadow: 3px 3px 3px #333;
   margin: auto;
-  min-width: 0;
-  max-width: 2048px;
+  max-width: 75rem;
   width: 80%;
 }
 
@@ -27,8 +25,8 @@ header {
   background-position: right;
   background-repeat: no-repeat;
   color: #fff;
-  height: 60px;
-  padding-top: 15px;
+  height: auto;
+padding: 1rem;
   text-align: center;
 }
 
@@ -46,17 +44,26 @@ header a:hover {
 }
 
 nav {
-  float: left;
   font-size: 120%;
   font-weight: bold;
-  padding: 1.5em;
-  width: 160px;
+  padding: 0;
+  text-align: center;
 }
 
 nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  max-width: 100%;
+  box-sizing: border-box;
+  flex-wrap: wrap;
   list-style-type: none;
-  margin: 0;
-  padding-left: 0;
+}
+nav li {
+  border-bottom: 1px solid #003;
+  padding: 0.5rem 0;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 nav a {
@@ -77,22 +84,20 @@ nav a:hover {
 
 main {
   background-color: #fff;
-  margin-left: 190px;
-  padding: 1px 20px 20px 30px;
-  overflow: auto;
+  padding: 0.0625rem 1.25rem 1.25rem 1.875rem;
 }
 
 
 
 h1 {
-  letter-spacing: 0.25em;
+  letter-spacing: 0.25rem;
   margin-bottom: 0;
   margin-top: 0;
 }
 
 h2 {
-  color: #1976d2;
-  text-shadow: 1px 1px #404040;
+  color: #39c;
+text-shadow: 1px 1px 1px #ccc;
 }
 
 h3 {
@@ -134,12 +139,11 @@ address {
   background-repeat: no-repeat;
   background-size: cover;
   height: 18.75rem;
-  margin-left: 190px;
+
 }
 
-#homehero {
-    height: 300px;
-  background-image: url(images/coast.jpg);
+#homehero {  
+  background-image: url(images/coast2.jpg);
 }
 
 #yurthero {
@@ -165,54 +169,7 @@ address {
   overflow-wrap: break-word;
   }
 
-  @media (max-width: 32.5rem) {
-    body {
-      background-image: none;
-      border: none;
-      box-shadow: none;
-      margin: 0;
-      }
-      #wrapper {
-  width: 100%;
-  max-width: 100%;
-  margin: 0;
-  padding: 0;
-  display: block;
-  grid-template-columns: 1fr;
-  box-sizing: border-box;
-}
-main {
-  margin-left: 0;
-}     
-        header {
-          background-image: none;
-          padding: 0;
-          }
-          nav {
-    float: none;
-    width: 100%;
-    padding: 0.5em;
-    box-sizing: border-box;
-}
-     
-     nav ul {
-      display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-   nav li {                     
-    width: auto;  
-    }
-nav a {
-  display: block;  
-  padding: 0.5rem;                 
-  }   
-footer {
-  padding: 1em;
-  }
-  }
+ 
 
   @media (min-width: 37.5rem) {
     nav ul {
@@ -236,65 +193,3 @@ nav li {
       max-width: 100%;
       }
       }
-/* Final mobile layout corrections */
-@media (max-width: 37.5rem) {
-    #wrapper {
-        width: 100%;
-        min-width: 0;
-        max-width: 100%;
-        margin: 0;
-    }
-
-    header {
-        height: auto;
-        min-height: 80px;
-        padding: 12px 8px;
-        background-image: none;
-        text-align: center;
-    }
-
-    h1 {
-        font-size: 1.5rem;
-        letter-spacing: 0.08em;
-        line-height: 1.3;
-        margin: 0;
-    }
-
-    nav {
-        float: none;
-        width: 100%;
-        padding: 0.5rem;
-        box-sizing: border-box;
-    }
-
-   nav ul {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 0.5rem;
-    margin: 0;
-    padding: 0;
-}
-
-nav li {
-    width: auto;
-}
-#homehero,
-#yurthero,
-#trailhero {
-    display: none;
-}
-    
-
-    nav a {
-        display: block;
-        padding: 0.5rem;
-    }
-
-    main {
-        margin-left: 0;
-        padding: 1rem;
-    }
-}
